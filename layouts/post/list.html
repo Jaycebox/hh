@@ -1,0 +1,22 @@
+{{ define "main" }}
+<main>
+    <div class="blogListTitle">
+        <h1>{{ .Title }}</h1>
+    </div>
+    <div>
+        {{ range (.Paginator 10).Pages.ByDate.Reverse }}
+        <div>
+            <h2>
+                <a href="{{.Permalink}}">{{ .Title }}</a>
+            </h2>
+            <p>{{ .Summary }}</p>
+            <div class="read-more">
+                <a alt="{{.Title}}" href="{{.Permalink}}">Read more</a>
+            </div>
+            <time>{{ .Date.Format "01-02, 2006" }}</time>
+        </div>
+        {{ end }}
+    </div>
+    {{- partial "pagination.html" . -}}
+</main>
+{{ end }}

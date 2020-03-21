@@ -1,0 +1,96 @@
+/* 一些约定 */
+
+a {
+    color: inherit;
+}
+
+
+/* 基本css布局 */
+
+body {
+    background-color: yellowgreen;
+    margin: 0;
+}
+
+header {
+    background-size: cover;
+    background-color: brown;
+}
+
+header {
+    position: fixed;
+    width: 20%;
+    height: 100%;
+}
+
+main {
+    position: relative;
+    width: 80%;
+    left: 20%;
+    height: 90%;
+    padding-left: 3%;
+    padding-top: 1px;
+    /*解决留边*/
+}
+
+main {
+    background-color: white;
+}
+
+footer {
+    position: relative;
+    width: 80%;
+    height: 10%;
+    left: 20%;
+    bottom: 0;
+}
+
+footer {
+    background-color: #112f41;
+    color: white;
+}
+
+
+/* 侧边栏 */
+
+.header-content {}
+
+.avatar {
+    position: relative;
+    margin: 30% auto;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.avatar img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.menu {}
+
+.menu p {
+    text-align: center;
+}
+
+
+/* 主体 */
+
+
+
+/* 底部 */
+
+.footer-content {
+    font-size: small;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* 小玩意儿 */
+
+
