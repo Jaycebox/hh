@@ -1,0 +1,26 @@
+.portfolioListTitle{}
+
+
+
+.portfolioListTable{
+    position: relative;
+    margin-right: 5%;
+}
+
+.portfolioListItem{
+    position: relative;
+    width: 45%;
+    min-height: 400px;
+    margin: 1%;
+    float: left;
+    display: table-cell;
+
+    text-align: center;
+    
+    border: 5px solid black;
+}
+
+.portfolioListItem h1{
+    position: relative;
+    padding-top: 20%;
+}

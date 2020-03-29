@@ -1,10 +1,31 @@
 {{ define "main" }}
 <main>
     <div>
+        <h3>
+            {{ range $i, $tag := .Params.series }}
+            {{- with $.Site.GetPage "taxonomyTerm" (printf "series/%s" ( urlize .)) -}}
+            <code>.<a href="{{ .Permalink }}">{{.Title}}</a></code>
+            {{ end }}
+        {{ end }}
+        </h3>
+    </div>
+    <div>
         <h1>{{ .Title }}</h1>
     </div>
     <div>
+        <code>标签：</code>
+        {{ range $i, $tag := .Params.tags }}
+            {{- with $.Site.GetPage "taxonomyTerm" (printf "tags/%s" ( urlize .)) -}}
+            <code>{{$i}}.<a href="{{ .Permalink }}">{{.Title}}</a></code>
+            {{ end }}
+        {{ end }}
+    </div>
+    <div class="markdown-content">
         {{.Content}}
     </div>
+    <div class="toc">
+        {{.TableOfContents}}
+    </div>
+
 </main>
 {{ end }}

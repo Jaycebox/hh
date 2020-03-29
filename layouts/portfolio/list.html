@@ -1,0 +1,22 @@
+{{ define "main" }}
+<main>
+    <div>
+        <div class="portfolioListTitle">
+            <h1>{{ .Title }}</h1>
+        </div>
+        <div class="portfolioListTable">
+            {{ range $i, $p := (.Paginator 4).Pages.ByDate.Reverse }}
+            <a href="{{.Permalink}}">
+                <div class="portfolioListItem">
+                    <h1>
+                        {{ .Title }}
+                    </h1>
+                    <time>发布时间：{{ .Date.Format "2006-01" }}</time>
+                </div>
+            </a>
+            {{ end }}
+        </div>
+        {{- partial "pagination.html" . -}}
+    </div>
+</main>
+{{ end }}

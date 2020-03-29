@@ -6,9 +6,12 @@ a {
 
 
 /* 基本css布局 */
+html{
+    background-color: yellow;
+}
 
 body {
-    background-color: yellowgreen;
+    background-color: white;
     margin: 0;
 }
 
@@ -43,6 +46,8 @@ footer {
     height: 10%;
     left: 20%;
     bottom: 0;
+
+    display: table;
 }
 
 footer {
