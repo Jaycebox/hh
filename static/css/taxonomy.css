@@ -1,0 +1,19 @@
+.taxonomyListTitle{
+}
+
+.taxonomyList h2{
+    display: inline;
+}
+
+.taxonomyList time{
+    display: inline;
+    padding-left: 10px;
+}
+
+.taxonomyList a{
+    display: inline;
+    padding-left: 50%;
+}
+.taxonomyList h2 a{
+    padding-left: 0%;
+}

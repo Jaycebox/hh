@@ -1,0 +1,21 @@
+{{ define "main" }}
+<main>
+    <div>
+        <div class="taxonomyListTitle">
+            <h1>{{ .Title }}</h1>
+        </div>
+        <div>
+            {{ range (.Paginator 20).Pages.ByDate.Reverse }}
+            <div class="taxonomyList">
+                <h2>
+                    <a href="{{.Permalink}}">{{ .Title }}</a>
+                </h2>
+                <time>{{ .Date.Format "01-02, 2006" }}</time>
+                <a alt="{{.Title}}" href="{{.Permalink}}">Read more</a>
+            </div>
+            {{ end }}
+        </div>
+        {{- partial "pagination.html" . -}}
+    </div>
+</main>
+{{ end }}

@@ -10,16 +10,25 @@
     background: #eef0f4;
 }
 
-
 /* image */
 .markdown-content img{
     max-width: 100%;
 }
 
+/* table */
+.markdown-content table{
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+}
+.markdown-content table , table tr td{
+    border: 2px solid black;
+}
+
+
 /* url 改不了target */
 
-
-/* TOC */
+/* 右侧TOC */
 .toc{
     position: fixed;
     right: 2%;
